@@ -13,8 +13,8 @@ ip=$3
 
 # Connect to the remote host using SSH
 sshpass -p "$password" ssh $username@$ip << EOF
-    # Search for 'user.txt' or 'root.txt' using locate and store the result in a variable
-    file_path=\$(locate -b user.txt 2>/dev/null || locate -b root.txt 2>/dev/null)
+    # Search for 'user.txt' or 'root.txt' using find and store the result in a variable
+    file_path=\$(find / -type f -name 'user.txt' -o -name 'root.txt' 2>/dev/null)
 
     # Check if the file was found
     if [ -n "\$file_path" ]; then
