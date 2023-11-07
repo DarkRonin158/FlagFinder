@@ -15,6 +15,6 @@ You can run this script like so:
 
 bash
 
-./script.sh <username> <password> <ip>
+./flagfinder.sh <username> <password> <ip>
 
 Replace <username>, <password>, and <ip> with your specific values. Please be aware that storing passwords in scripts is generally not secure. If possible, consider using SSH keys or other secure methods for authentication.
